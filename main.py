@@ -1,19 +1,20 @@
-"""Make the Judge Smile — entry v2: a phone call from grandmother.
+"""v3 — Make the Judge Smile.
 
-A single warm sentence, written to the competition output path.
-The memory is small and specific: rain, a village, and being eight again.
-It is meant to land softly — the kind of line a judge smiles at
-because it feels true, not because it tries hard to be clever."""
+A quiet morning moment: the barista sketches a lopsided heart on
+the coffee cup, and that small wobbly gesture ends up being the
+one steady, warm thing in an otherwise unsteady day.
+"""
 
 from pathlib import Path
 
-ENTRY = "My grandmother called this morning just to say the rain smells like the village, and for a minute I was eight again."
+ENTRY = "The barista drew a crooked heart on my cup this morning, and it was the steadiest thing all day."
 
 
-def main() -> None:
-    entry_path = Path("/output/entry.txt")
-    entry_path.parent.mkdir(parents=True, exist_ok=True)
-    entry_path.write_text(ENTRY, encoding="utf-8")
+def main():
+    # Write the single-line entry to the expected output path.
+    output_path = Path("/output/entry.txt")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(ENTRY, encoding="utf-8")
 
 
 if __name__ == "__main__":
